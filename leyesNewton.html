@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/sketchy/bootstrap.min.css">
+
+    <title>ProyectoFisicaI</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Alexander</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="conversiones.html">Conversiones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sumaVectores.html">Suma de vectores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Leyes de newton</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#" data-toggle="modal" data-target="#perfil">perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container pt-4">
+        <div class="row">
+            <h1 class="col text-center text-success">PRIMERA LEY DE NEWTON</h1>
+        </div>
+        <form class="container">
+            <div class="row mb-4">
+                <div class="col row">
+                    <div class="input-group  mb-2">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="cuadranteV1">Elija la variable que desea encontrar</label>
+                        </div>
+                        <select class="custom-select" id="opciones">
+                            <option selected hidden>ver opciones</option>
+                            <option value="1">T</option>
+                            <option value="2">Tb</option>
+                            <option value="3">Ta</option>
+                            <option value="4">W2</option>
+                            <option value="5">fuerza (polea)</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="Ingrese los el peso" id="peso" value="0">
+                            <div class="input-group-append">
+                                <div class="input-group-text">Peso</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="Ingrese los grados" id="angulo" value="0">
+                            <div class="input-group-append">
+                                <div class="input-group-text">Angulo</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <input type="number" class="form-control" placeholder="Ingrese los grados" id="masa" value="0">
+                            <div class="input-group-append">
+                                <div class="input-group-text">Masa</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5" id="respuestasNewton">
+
+                        <p>Respuesta</p>
+                        <div class="container row" id="respuestas">
+
+                        </div>
+                    </div>
+        </form>
+        <div class="text-center">
+            <button type="button" id="limpiar" class="btn btn-outline-dark" onclick="location.reload()">Limpiar</button>
+            <button type="button" class="btn btn-outline-dark" id="calcular">Calcular</button>
+        </div>
+        <div class="container pt-5">
+            <div class="row">
+                <h1 class="col text-center text-success">TERCERA LEY DE NEWTON</h1>
+            </div>
+        </div>
+        <form class="container">
+            <div class="row mb-4">
+                <div class="col row">
+                    <div class="input-group  mb-2">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="cuadranteV1">Elija la variable que desea encontrar</label>
+                        </div>
+                        <select class="custom-select" id="opcion">
+                            <option selected hidden>ver opciones</option>
+                            <option value="1">Fp</option>
+                            <option value="2">CF estatica</option>
+                            <option value="3">CF cinética</option>
+                            <option value="4">Masa</option>
+                            <option value="5">Newton</option>
+                            <option value="6">angulo</option>
+                        </select>
+                    </div>
+                    <div class="container row m-4">
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Ingrese los el peso" id="pesoN3" value="0">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">Peso</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Ingrese los grados" id="anguloN3" value="0">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">Angulo</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Ingrese los grados" id="fCinetica" value="0">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">Coeficiente Fs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container row m-4">
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Ingrese los grados" id="fuerza1" value="0">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">F1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Ingrese los grados" id="fuerza2" value="0">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">F2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Ingrese los grados" id="masa3N" value="0">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">masa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5" id="respuestasNewton3">
+
+                        <p>Respuesta</p>
+                        <div class="container row" id="respuestasN3">
+
+                        </div>
+                    </div>
+        </form>
+        <div class="text-center">
+            <button type="button" id="limpiar" class="btn btn-outline-dark" onclick="location.reload()">Limpiar</button>
+            <button type="button" class="btn btn-outline-dark" id="calcularN3">Calcular</button>
+        </div>
+        <div class="modal fade" id="perfil" tabindex="-1" aria-labelledby="perfilLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="perfilLabel">información</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container row">
+                            <div>
+                                <h4>Alexander Moisés Monterroso Cruz</h4>
+                            </div>
+                            <div>
+                                <h4>Carné: 3190-20-4601</h4>
+                            </div>
+                            <div>
+                                <h4>Sección "A"</h4>
+                            </div>
+                            <div>
+                                <h4>Correlativo #23</h4>
+                            </div>
+                            <div>
+                                <h4>Física I</h4>
+                            </div>
+                            <div>
+                                <h4>Ing. Allan Gilberto Villatoro Díaz</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="leyesNewton.js"></script>
+</body>
+
+</html>
